@@ -1,0 +1,49 @@
+<!doctype html>
+<html class="export" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Cascading grid layout library">
+  <title>meetjokes</title>
+    <link rel="stylesheet" href="./static/css/masonry-docs.css" media="screen">
+   <style type="text/css">
+		body{
+  			background-color: #ffffff;
+			}
+    </style>
+</head>
+
+<body class="page--" data-page="">
+
+  <div class="site-nav">
+    <div class="container">
+      <ol class="site-nav__list">
+        <li class="site-nav__item site-nav__item--homepage">
+          <a href=".">Masonry</a></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="hero" data-js="hero">
+      <div class="container">
+        <div class="hero-grid clearfix">
+          <div class="hero-grid__item">
+            <a class="hero-grid__big-button" href="https://www.zhihu.com">
+              WO XIANG JING JING
+            </a>
+          </div>
+        {% for content in conte %}
+          <div class="hero-grid__item hero-grid__item--texty hero-grid__item--width2">
+            <h2 class="hero__what-is-title">{{content['question']}}</h2>
+            <p class="hero__what-is-description">{{content['content']}}</p>
+          </div>
+        {% endfor %} 
+        </div>          
+      </div> 
+    </div> 
+
+  <script src="./static/js/masonry.pkgd.min.js"></script>
+
+</body>
+</html>
